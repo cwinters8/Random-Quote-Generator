@@ -3,7 +3,7 @@
 body {
   background-color: #36b55c;
   color: white;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins Display', sans-serif;
   transition: .5s;
 }
 
@@ -21,6 +21,7 @@ body {
   line-height: 1.1;
   position: relative;
   margin: 0;
+  font-family: 'Playfair', serif;
 }
 
 .quote:before, .quote:after {
@@ -80,6 +81,7 @@ body {
   background-color: rgba(255,255,255,0);
   padding: 15px 0;
   transition: .5s ;
+  font-weight: bold;
 }
 
 #loadQuote:hover {
