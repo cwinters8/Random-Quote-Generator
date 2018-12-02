@@ -4,6 +4,7 @@ body {
   background-color: #36b55c;
   color: white;
   font-family: 'Playfair Display', serif;
+  transition: .5s;
 }
 
 #quote-box {
@@ -76,7 +77,7 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: rgba(255,255,255,0);
   padding: 15px 0;
   transition: .5s ;
 }
@@ -87,6 +88,30 @@ body {
 
 #loadQuote:focus {
   outline: none;
+}
+
+.navy {
+  background-color: #18121E;
+}
+
+.gunmetal {
+  background-color: #233237;
+}
+
+.rusty-red {
+  background-color: #984B43;
+}
+
+.yellow {
+  background-color: #EAC67A;
+}
+
+.forest {
+  background-color: #015249;
+}
+
+.violet {
+  background-color: #6E3667;
 }
 
 @media (max-width: 420px) {

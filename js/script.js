@@ -47,30 +47,44 @@ let quotes = [
     }   
 ]
 
+// array of colors
+let colorClasses = ['navy', 'gunmetal', 'rusty-red', 'yellow', 'forest', 'violet'];
+
+// get a random number between 0 and the provided maximum
+function getRandom(max) {
+    return Math.floor(Math.random() * max);
+}
+
 // return a random quote from the quotes array
 function getRandomQuote(array) {
-    let random = Math.floor(Math.random() * array.length);
+    let random = getRandom(array.length);
     let quote = array[random];
     return(quote);
 }
 
-/***
-  Create the `printQuote` function to: 
-   - call the `getRandomQuote` function and assign it to a variable.
-   - use the properties of the quote object stored in the variable to 
-     create your HTML string.
-   - use conditionals to make sure the optional properties exist before 
-     they are added to the HTML string.
-   - set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
+// return a random color
+function getRandomColorClass(array) {
+    let random = getRandom(array.length);
+    let color = array[random];
+    return(color);
+}
+
+// set color on HTML body
+function setColorClass() {
+    let color = getRandomColorClass(colorClasses);
+    document.body.className = color;
+}
+
 // prints a provided message to the div with the provided class
 function print(message, divClass) {
     let div = document.getElementById(divClass);
     div.innerHTML = message;
 }
 
+let id;
 // print a random quote to the page
 function printQuote() {
+    clearInterval(id);
     let quote = getRandomQuote(quotes);
     let html = '<p class="quote">' + quote['quote'] + '</p>';
     html += '<p class="source">' + quote['source'];
@@ -81,9 +95,11 @@ function printQuote() {
         html += '<span class="year">' + quote['year'] + '</span>';
     }
     html += '</p>';
+    setColorClass();
     print(html, 'quote-box');
+    id = setInterval(function() {printQuote()}, 10000);
 }
-printQuote(quotes);
+printQuote();
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -93,6 +109,3 @@ printQuote(quotes);
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
