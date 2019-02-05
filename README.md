@@ -14,4 +14,4 @@ CSS
 - Don't allow the same quote to be shown back to back
 
 ## Credits
-The majority of the HTML and CSS were provided by [Team Treehouse](https://teamtreehouse.com).
+The majority of the HTML and CSS were provided by [Team Treehouse](http://referrals.trhou.se/clarkwinters).
