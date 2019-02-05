@@ -12,3 +12,6 @@ CSS
 - Generate quotes from a database or API
 - Add tags to quotes
 - Don't allow the same quote to be shown back to back
+
+## Credits
+The majority of the HTML and CSS were provided by [Team Treehouse](https://teamtreehouse.com).
